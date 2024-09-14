@@ -101,28 +101,7 @@ public class NumberAnalysis {
             System.out.println();
 
             // 8. Числа в порядке убывания частоты встречаемости чисел
-            // Подсчет частоты встречаемости чисел
-            int[] frequencyArray = new int[100001];
-            for (int number : numbers) {
-                frequencyArray[number]++;
-            }
-            Arrays.sort(numbers);
-            int[] sortedNumbers = new int[numbers.length];
-            int currentFrequency = frequencyArray[numbers[numbers.length - 1]];
-            int sortedIndex = sortedNumbers.length - 1;
-            for (int i = numbers.length - 1; i >= 0; i--) {
-                if (frequencyArray[numbers[i]] == currentFrequency) {
-                    sortedNumbers[sortedIndex--] = numbers[i];
-                } else {
-                    currentFrequency = frequencyArray[numbers[i]];
-                    sortedNumbers[sortedIndex--] = numbers[i];
-                }
-            }
-            System.out.println("Числа в порядке убывания частоты встречаемости:");
-            for (int number : sortedNumbers) {
-                System.out.println(number + " (" + frequencyArray[number] + " раз)");
-            }
-
+            //??
 
             // 9. «Счастливые» числа
             System.out.println("«Счастливые» числа:");
@@ -154,7 +133,6 @@ public class NumberAnalysis {
         System.out.println();
     }
 
-    // Проверка на простое число
     private static boolean isPrime(int number) {
         if (number <= 1) {
             return false;
@@ -167,7 +145,6 @@ public class NumberAnalysis {
         return true;
     }
 
-    // Проверка на «счастливое» число
     private static boolean isHappy(int number) {
         Set<Integer> visitedNumbers = new HashSet<>();
         while (number != 1) {
@@ -186,7 +163,6 @@ public class NumberAnalysis {
         return true;
     }
 
-    // Проверка на число-палиндром
     private static boolean isPalindrome(int number) {
         int reversedNumber = 0;
         int originalNumber = number;
