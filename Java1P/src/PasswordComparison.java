@@ -3,18 +3,15 @@ import java.util.Scanner;
 public class PasswordComparison {
 
     public static void main(String[] args) {
-        try (// Получить пароль из командной строки
+        try (
                 Scanner scanner = new Scanner(System.in)) {
             System.out.println("Введите пароль:");
             String password = scanner.nextLine();
 
-            // Строка-образец пароля
-            String samplePassword = "secret";
+            String samplePassword = "password123";
 
-            // Сравнить пароль со строкой-образцом
             boolean isCorrect = password.equals(samplePassword);
 
-            // Вывести результат сравнения
             if (isCorrect) {
                 System.out.println("Пароль правильный.");
             } else {
