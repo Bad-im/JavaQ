@@ -4,7 +4,6 @@ public class NumberAnalysis {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            // Ввести n целых чисел с консоли
             System.out.println("Введите количество чисел:");
             int n = scanner.nextInt();
 
@@ -98,21 +97,6 @@ public class NumberAnalysis {
             Arrays.sort(numbers);
             for (int i = numbers.length - 1; i >= 0; i--) {
                 System.out.print(numbers[i] + " ");
-            }
-            System.out.println();
-
-            // 8. Числа в порядке убывания частоты встречаемости чисел
-            System.out.println("Числа в порядке убывания частоты встречаемости чисел:");
-            Map<Integer, Integer> frequencyMap = new HashMap<>();
-            for (int number : numbers) {
-                frequencyMap.put(number, frequencyMap.getOrDefault(number, 0) + 1);
-            }
-
-            List<Map.Entry<Integer, Integer>> frequencyList = new ArrayList<>(frequencyMap.entrySet());
-            frequencyList.sort((o1, o2) -> o2.getValue() - o1.getValue());
-
-            for (Map.Entry<Integer, Integer> entry : frequencyList) {
-                System.out.print(entry.getKey() + " (" + entry.getValue() + ") ");
             }
             System.out.println();
 

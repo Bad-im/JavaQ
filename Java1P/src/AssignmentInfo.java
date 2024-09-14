@@ -1,20 +1,16 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class AssignmentInfo {
 
     public static void main(String[] args) {
-        // Фамилия разработчика
-        String developerName = "Иванов";
+        String developerName = "Астапов";
 
-        // Дата и время получения задания
-        LocalDateTime receiveDateTime = LocalDateTime.now();
+        LocalDate receiveDate = LocalDate.of(2024, 9, 7);
 
-        // Дата и время сдачи задания
-        LocalDateTime submitDateTime = LocalDateTime.now().plusDays(7);
+        LocalDate submitDate = LocalDate.of(2024, 9, 14);
 
-        // Вывести информацию о задании
         System.out.println("Фамилия разработчика: " + developerName);
-        System.out.println("Дата и время получения задания: " + receiveDateTime);
-        System.out.println("Дата и время сдачи задания: " + submitDateTime);
+        System.out.println("Дата получения задания: " + receiveDate);
+        System.out.println("Дата сдачи задания: " + submitDate);
     }
 }
